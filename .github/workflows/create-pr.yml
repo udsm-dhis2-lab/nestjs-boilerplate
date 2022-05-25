@@ -1,0 +1,21 @@
+name: Create Release PR
+
+on:
+  push:
+    branches: [main, develop]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [15.x]
+    steps:
+      - uses: actions/checkout@v2
+      - name: 🔀 Create PR
+        uses: BaharaJr/create-pr@0.0.1
+        with:
+          GITHUB_TOKEN: ${{secrets.TOKEN}}
+          DESTINATION_BRANCH: release
+          KEYWORD: release
