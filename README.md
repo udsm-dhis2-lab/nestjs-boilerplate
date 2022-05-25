@@ -2,6 +2,8 @@
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
 </p>
 
+![action status](https://github.com/udsm-dhis2-lab/nestjs-boilerplate/actions/workflows/create-pr.yml/badge.svg?branch=main)
+
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
@@ -71,5 +73,3 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
-# nestjs-boilerplate git init git add README.md git commit -m initialize repo git branch -M main git remote add origin git@github.com:udsm-dhis2-lab/nestjs-boilerplate.git git push -u origin main
-# nestjs-boilerplate git init git add README.md git commit -m initialize repo git branch -M main git remote add origin git@github.com:udsm-dhis2-lab/nestjs-boilerplate.git git push -u origin main
