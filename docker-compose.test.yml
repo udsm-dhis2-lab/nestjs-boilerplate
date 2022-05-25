@@ -1,0 +1,27 @@
+version: '3.4'
+
+services:
+  api-test:
+    build: .
+    command: npm run test:e2e
+    environment:
+      - FORCE_COLOR=3
+    volumes:
+      - ./src:/app/src
+      - ./test:/app/test
+    networks:
+        - nestjs-boilerplate
+    depends_on:
+      - db-test
+  db-test:
+    image: postgres:14.2-alpine3.15
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres
+    restart: always
+    networks:
+      - nestjs-boilerplate
+networks:
+  nestjs-boilerplate:
+        driver: bridge
