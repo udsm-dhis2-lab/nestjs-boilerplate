@@ -1,7 +1,7 @@
 version: '3.4'
 
 services:
-  mediator:
+  api:
     build: .
     command: npm run start:dev
     restart: always
@@ -13,8 +13,6 @@ services:
       - 3000:3000
     networks:
       - nestjs-boilerplate-api
-    depends_on:
-      - hapi
   db:
     image: postgres:14.2-alpine3.15
     environment:
@@ -30,9 +28,7 @@ services:
 volumes:
   db-volume:
     driver: local
-  postdb-data:
-    driver: local
 
 networks:
-    nestjs-boilerplate-api:
-      driver: bridge
+  nestjs-boilerplate-api:
+    driver: bridge
